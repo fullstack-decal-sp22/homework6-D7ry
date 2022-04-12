@@ -1,13 +1,13 @@
 import {useState} from "react";
 import axios from 'axios';
 
-const NewComment = (a_id) => {
+const NewComment = (id) => {
   const [comment, setComment] = useState();
 
   const onSubmit = () => {
-
-    axios.post(`http://localhost:3002/post/${a_id}/comment`,
-        {"newComment": comment}
+      console.log("new comment has been posted!");
+    axios.post(`http://localhost:3002/post/${id}/comment`,
+        {"comment": comment}
     )
     .then((response) => console.log(response))
     .catch((error) => console.log(error));

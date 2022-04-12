@@ -8,7 +8,7 @@ const Post = ({ title, body, id, comments}) => {
     </h3>
     <p>{body}</p>
     <Comments body = {comments}></Comments>
-    <NewComment a_id = {id}/>
+    <NewComment id = {id}/>
   </div>
   
 }

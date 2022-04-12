@@ -1,8 +1,9 @@
-const Comments = ({ body }) => {
+/*Comments belong to a single post. */
+const Comments = ({ comments }) => {
     return <div font-size style={{ textAlign: 'left', marginBottom: '12px'}}>
       {
-        body ? 
-        body.map(c => <p>{c}</p>) : "Nobody has commented. Leave a message!"
+        comments ? 
+        comments.map(c => <p>{c}</p>) : "Nobody has commented. Leave a message!"
       }
 
     </div>
