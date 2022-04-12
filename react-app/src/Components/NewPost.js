@@ -1,4 +1,5 @@
 import {useState} from "react";
+import axios from "axios";
 
 const NewPost = () => {
   const [id, setId] = useState();
@@ -9,8 +10,24 @@ const NewPost = () => {
     console.log({
       id,
       title,
-      body
+      body,
     })
+    function clearInput() {
+      setId('')
+      setTitle('')
+      setBody('')
+    }
+
+
+    axios.post('http://localhost:3002/post', {
+      "id":id,
+      "title": title,
+      "body": body,
+      "comments": []
+    }).then((a_response) => {
+      clearInput();
+    })
+    .catch((error) => console.log(error));
   }
 
   return <div>

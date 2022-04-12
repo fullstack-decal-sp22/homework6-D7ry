@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <h1>Blockstagram</h1>
+      <h1>Chungustagram</h1>
       <Feed/>
     </div>
   );
